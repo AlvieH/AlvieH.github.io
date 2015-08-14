@@ -10,13 +10,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Work+Sans:400,800' rel='stylesheet' type='text/css'>
 	<script>
-		$(window).scroll(function () {
-    if ($(window).scrollTop() > 100) {
-        $('#nav').css('top', $(window).scrollTop());
-			}
-		}
-		);
+			$('#up, #down').on('click', function(e){
+			e.preventDefault();
+			var target= $(this).get(0).id == 'up' ? $('#down') : $('#up');
+			$('html, body').stop().animate({
+			scrollTop: target.offset().top
+			}, 1000);
+			});
 	</script>
+	
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
@@ -41,7 +44,12 @@
 <!--How am I going to lay out the pictures?-->
 	<div id="art">
 		<h2> Art </h2>
+	
 	</div>
+	
+
+	<img src="after.png"/>
+
 	
 	<div id="Unreal">
 		<h2> Unreal Engine </h2>
@@ -50,10 +58,13 @@
 	<div id="Modeling">
 		<h2> 3D Modeling </h2>
 	</div>
+	
+	<div id="About">
+		<h2> About Me </h2>
+	</div>
 </main>
 
 <aside>
-	<h3> About Me </h3>
 		<!--Remember to write this-->
 		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -72,10 +83,11 @@
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</p>
 </aside>
+
 </body>
 
-<footer> <a href="mailto:alvinhermans123@gmail.com">Email</a>
-		<a href= "https://www.facebook.com/alvin.hermans?fref=ts">Facebook</a>
-		<a href= "https://instagram.com/alvin_the_destroyer/">Instagram</a>
+<footer> <a href="mailto:alvinhermans123@gmail.com"> <i class="fa fa-envelope"> </i> <p>Email</p> </a>
+		<a href= "https://www.facebook.com/alvin.hermans?fref=ts"> <i class="fa fa-facebook-square"></i> <p>Facebook</p></a>
+		<a href= "https://instagram.com/alvin_the_destroyer/"> <i class="fa fa-instagram"></i><p>Instagram</p></a>
 </footer>
 </html>
