@@ -9,17 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Work+Sans:400,800' rel='stylesheet' type='text/css'>
-	<script>
-			$('#up, #down').on('click', function(e){
-			e.preventDefault();
-			var target= $(this).get(0).id == 'up' ? $('#down') : $('#up');
-			$('html, body').stop().animate({
-			scrollTop: target.offset().top
-			}, 1000);
-			});
-	</script>
-	
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
@@ -28,9 +17,9 @@
 	<h1 id="header"> Alvin Hermans </h1>
 </header>
 <div id="nav">
-<nav>
+<nav id='nav_bar'>
 	<!-- title buttons, remember to add jquery -->
-	<ul>
+	<ul class='nav links'>
 		<li> <a href= "#art"> <i class="fa fa-paint-brush fa-2x"></i> <p> Art </p> </li> </a>
 		<li> <a href= "#Unreal"> <i class="fa fa-trophy fa-2x"></i> <p>Unreal Engine</p> </li> </a>
 		<li> <a href= "#Modeling"> <i class="fa fa-cube fa-2x"></i> <p>3D Modeling</p> </li> </a>
@@ -39,7 +28,7 @@
 	</ul>
 
 </nav>
-</nav>
+
 <main>
 <!--How am I going to lay out the pictures?-->
 	<div id="art">
@@ -47,8 +36,8 @@
 	
 	</div>
 	
-
-	<img src="after.png"/>
+<!--art pieces below-->
+	<img src="after.png" class="ImageBorder"/>
 
 	
 	<div id="Unreal">
