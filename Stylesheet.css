@@ -142,6 +142,21 @@ a:active {
 	font-family: 'Work Sans', sans-serif;
 	margin-top: 20px;
 	}
+	
+#nav
+{position:relative;
+}
+
+body{
+position:relative;
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  position: fixed;
+    width: 100%;
+}
 
 
 
